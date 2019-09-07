@@ -33,13 +33,13 @@ class Path
 public:
 	Path(std::string path)
 	{
-		currentPath = path;
+		strCurrPath = path;
 		pastPath = path;
 	}
 
 	std::string getPath() const
 	{
-		return currentPath;
+		return strCurrPath;
 	}
 
 	void cd(std::string newPath)
@@ -48,22 +48,22 @@ public:
 		int newPathLength = newPath.length();
 
 		if (newPathLength == 1 && (isspace(newPath[0]) || newPath[0] == '/')) {
-			currentPath = "/";
+			strCurrPath = "/";
 		}
 		else if (newPathLength > 0 && newPath[0] != '~') {
 			int i = 0;
 			while (i < newPathLength) {
-				int pathLength = currentPath.length();
+				int pathLength = strCurrPath.length();
 				if (newPath[i] == '.' && newPath[i + 1] == '.') {
 					//move up one directory
-					pastPath = currentPath;
+					pastPath = strCurrPath;
 					if (pathLength > 2) {
-						currentPath.erase(pathLength - 2, 2);
+						strCurrPath.erase(pathLength - 2, 2);
 						i = i + 3;
 					}
 					else {
 						//root directory
-						currentPath = "/";
+						strCurrPath = "/";
 						i = i + 3;
 					}
 
@@ -71,22 +71,22 @@ public:
 				else if (newPath[i] == '/') {
 					//direct pathname
 
-					pastPath = currentPath;
+					pastPath = strCurrPath;
 					//currentPath.erase(0,pathLength);
-					currentPath.clear();
+					strCurrPath.clear();
 					int j = 0;
 					while (j < newPathLength) {
 						//this is ok since we are assuming no invalid paths will be given
 						if (newPath[j] == '.') {
 							break;
 						}
-						currentPath += newPath[j];
+						strCurrPath += newPath[j];
 						j++;
 
 					}
 
-					if (currentPath[j - 1] == '/') {
-						currentPath.erase(j - 1, 1);   //get rid of extra '/'
+					if (strCurrPath[j - 1] == '/') {
+						strCurrPath.erase(j - 1, 1);   //get rid of extra '/'
 					}
 
 					i = i + j;
@@ -110,17 +110,17 @@ public:
 
 				else if (newPath[i] == '-') {
 					//didn't say in problem statement to implement this, but figured I'd add it
-					swap(pastPath, currentPath);
+					swap(pastPath, strCurrPath);
 					i++;
 				}
 				else {
 					//relative pathname to child directory w/o "./"
-					pastPath = currentPath;
+					pastPath = strCurrPath;
 					if (pathLength > 1) {
-						currentPath = currentPath + "/" + newPath[i];
+						strCurrPath = strCurrPath + "/" + newPath[i];
 					}
 					else {
-						currentPath = currentPath + newPath[i];
+						strCurrPath = strCurrPath + newPath[i];
 					}
 					i = i + 2;
 				}
@@ -128,7 +128,7 @@ public:
 		}
 		else {
 			//cd command followed by nothing -> go to root directory
-			currentPath = "/";
+			strCurrPath = "/";
 		}
 
 
@@ -136,7 +136,7 @@ public:
 
 private:
 	std::string pastPath;
-	std::string currentPath;
+	std::string strCurrPath;
 };
 /*
 #ifndef RunTests

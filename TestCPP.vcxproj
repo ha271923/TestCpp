@@ -151,44 +151,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="copy bits.cpp" />
+    <ClCompile Include="fFBS.cpp" />
+    <ClCompile Include="FUN.cpp" />
+    <ClCompile Include="Path.cpp" />
     <ClCompile Include="TestCPP.cpp" />
     <ClCompile Include="testdome_cpp2\BST.cpp" />
     <ClCompile Include="testdome_cpp2\MultipleChoiceTest.cpp" />
-    <ClCompile Include="testdome_cpp2\palindrome.cpp" />
     <ClCompile Include="testdome_cpp2\path.cpp" />
-    <ClCompile Include="testdome_cpp2\sortedSearch.cpp" />
     <ClCompile Include="testdome_cpp2\trainComposition.cpp" />
-    <ClCompile Include="testdome_cpp2\twoSum.cpp" />
     <ClCompile Include="testdome_cpp2\userInput.cpp" />
     <ClCompile Include="testdome_cpp3\BinarySearchTree.cpp" />
     <ClCompile Include="testdome_cpp3\MergeNames.cpp" />
     <ClCompile Include="testdome_cpp3\MultipleChoiceTest.cpp" />
-    <ClCompile Include="testdome_cpp3\Palindrome.cpp" />
     <ClCompile Include="testdome_cpp3\Pipeline.cpp" />
     <ClCompile Include="testdome_cpp3\Playlist.cpp" />
-    <ClCompile Include="testdome_cpp3\SortedSearch.cpp" />
     <ClCompile Include="testdome_cpp3\TrainComposition.cpp" />
-    <ClCompile Include="testdome_cpp3\Two Sum.cpp" />
     <ClCompile Include="testdome_cpp3\UserInput.cpp" />
     <ClCompile Include="testdome_cpp4\MergeNames.cpp" />
     <ClCompile Include="testdome_cpp4\MultipleChoice.cpp" />
     <ClCompile Include="testdome_cpp4\Palindrome.cpp" />
     <ClCompile Include="testdome_cpp4\Playlist.cpp" />
-    <ClCompile Include="testdome_cpp4\sortedsearch.cpp" />
     <ClCompile Include="testdome_cpp4\Twosum.cpp" />
     <ClCompile Include="testdome_cpp4\Userinput.cpp" />
     <ClCompile Include="testdome_cppc\BST_cpp\BST.cpp" />
     <ClCompile Include="testdome_cppc\BST_c\BST.c" />
     <ClCompile Include="testdome_cppc\Inspect_Bits_c\Inspect_Bits.c" />
-    <ClCompile Include="testdome_cppc\MergeNames_cpp\MergeNames.cpp" />
+    <ClCompile Include="testdome_cppc\MergeNames_cpp\MergeNames.c" />
     <ClCompile Include="testdome_cppc\Palindrome_cpp\Palindrome.cpp" />
     <ClCompile Include="testdome_cppc\Palindrome_c\Palindrome.c" />
     <ClCompile Include="testdome_cppc\Polymorphism\Polymorphism.cpp" />
     <ClCompile Include="testdome_cppc\SongPlaylist_cpp\SongPlaylist.cpp" />
     <ClCompile Include="testdome_cppc\SortedSearch_cpp\SortedSearch.cpp" />
     <ClCompile Include="testdome_cppc\SortingWords_c\SortingWords.c" />
-    <ClCompile Include="testdome_cppc\TrainComposition_cpp\TrainComposition.cpp" />
-    <ClCompile Include="testdome_cppc\TwoSum_cpp\TwoSum.cpp" />
     <ClCompile Include="testdome_cppc\UserInput_cpp\UserInput.cpp" />
     <ClCompile Include="testdome_cppc\WatchedVideos_c\WatchedVideos.c" />
     <ClCompile Include="testdome_cpp\testdome_allanagrams.cpp" />
@@ -209,7 +204,6 @@
     <ClCompile Include="testdome_cpp\testdome_magic_forest.cpp" />
     <ClCompile Include="testdome_cpp\testdome_multiplechoicetest.cpp" />
     <ClCompile Include="testdome_cpp\testdome_names_count.cpp" />
-    <ClCompile Include="testdome_cpp\testdome_palindrome.cpp" />
     <ClCompile Include="testdome_cpp\testdome_passwordvalidation.cpp" />
     <ClCompile Include="testdome_cpp\testdome_path.cpp" />
     <ClCompile Include="testdome_cpp\testdome_permissions.cpp" />
@@ -228,7 +222,7 @@
   <ItemGroup>
     <None Include="testdome_cpp2\README.md" />
     <None Include="testdome_cpp3\README.md" />
-    <None Include="testdome_cpp4\BinaryTree" />
+    <None Include="testdome_cpp4\BinaryTree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

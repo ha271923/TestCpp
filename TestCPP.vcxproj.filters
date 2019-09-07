@@ -16,11 +16,11 @@
     <Filter Include="Source Files\testdome_cpp">
       <UniqueIdentifier>{5460c996-b81e-4b0c-b948-aa2f1c695150}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PASS">
+      <UniqueIdentifier>{5a87984e-e881-4ef9-bae0-4a9263f6d68d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestCPP.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="testdome_cpp\testdome_allanagrams.cpp">
       <Filter>Source Files\testdome_cpp</Filter>
     </ClCompile>
@@ -75,9 +75,6 @@
     <ClCompile Include="testdome_cpp\testdome_names_count.cpp">
       <Filter>Source Files\testdome_cpp</Filter>
     </ClCompile>
-    <ClCompile Include="testdome_cpp\testdome_palindrome.cpp">
-      <Filter>Source Files\testdome_cpp</Filter>
-    </ClCompile>
     <ClCompile Include="testdome_cpp\testdome_passwordvalidation.cpp">
       <Filter>Source Files\testdome_cpp</Filter>
     </ClCompile>
@@ -120,5 +117,117 @@
     <ClCompile Include="testdome_cpp\testdome_userinput.cpp">
       <Filter>Source Files\testdome_cpp</Filter>
     </ClCompile>
+    <ClCompile Include="testdome_cppc\BST_c\BST.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\Inspect_Bits_c\Inspect_Bits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\Palindrome_c\Palindrome.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\SortingWords_c\SortingWords.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\WatchedVideos_c\WatchedVideos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\BinarySearchTree.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\BST_cpp\BST.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp2\BST.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\MergeNames.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\MergeNames_cpp\MergeNames.c">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp4\MergeNames.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp4\MultipleChoice.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\MultipleChoiceTest.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp2\MultipleChoiceTest.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp4\Palindrome.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\Palindrome_cpp\Palindrome.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp2\path.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\Pipeline.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\Playlist.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp4\Playlist.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\Polymorphism\Polymorphism.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\SongPlaylist_cpp\SongPlaylist.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\SortedSearch_cpp\SortedSearch.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCPP.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp2\trainComposition.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\TrainComposition.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp4\Twosum.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp2\userInput.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp4\Userinput.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp3\UserInput.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cppc\UserInput_cpp\UserInput.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Source Files\PASS</Filter>
+    </ClCompile>
+    <ClCompile Include="copy bits.cpp">
+      <Filter>Source Files\PASS</Filter>
+    </ClCompile>
+    <ClCompile Include="FUN.cpp">
+      <Filter>Source Files\PASS</Filter>
+    </ClCompile>
+    <ClCompile Include="fFBS.cpp">
+      <Filter>Source Files\PASS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="testdome_cpp2\README.md" />
+    <None Include="testdome_cpp3\README.md" />
+    <None Include="testdome_cpp4\BinaryTree.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -27,12 +27,12 @@ public:
 
 	Path(std::string path)
 	{
-		currentPath = path;
+		strCurrPath = path;
 	}
 
 	std::string getPath() const
 	{
-		return currentPath;
+		return strCurrPath;
 	}
 
 	Path cd(std::string newPath) const
@@ -41,7 +41,7 @@ public:
 
 		if (newPath == "/")
 		{
-			p.currentPath = "/";
+			p.strCurrPath = "/";
 
 			return p;
 		}
@@ -52,13 +52,13 @@ public:
 			{
 				if (newPath[0] == '.' && newPath[1] == '.')
 				{
-					if (!p.currentPath.empty())
+					if (!p.strCurrPath.empty())
 					{
-						p.currentPath.erase(p.currentPath.find_last_of("/\\"));
+						p.strCurrPath.erase(p.strCurrPath.find_last_of("/\\"));
 
-						if (p.currentPath.empty())
+						if (p.strCurrPath.empty())
 						{
-							p.currentPath = "/";
+							p.strCurrPath = "/";
 						}
 					}
 
@@ -78,12 +78,12 @@ public:
 
 			auto i = newPath.find_first_of("/\\");
 
-			if (p.currentPath.back() != '/' && p.currentPath.back() != '\\')
+			if (p.strCurrPath.back() != '/' && p.strCurrPath.back() != '\\')
 			{
-				p.currentPath += "/";
+				p.strCurrPath += "/";
 			}
 
-			p.currentPath += newPath.substr(0, i);
+			p.strCurrPath += newPath.substr(0, i);
 
 			newPath.erase(0, i);
 		}
@@ -93,7 +93,7 @@ public:
 
 private:
 
-	std::string currentPath;
+	std::string strCurrPath;
 };
 
 
