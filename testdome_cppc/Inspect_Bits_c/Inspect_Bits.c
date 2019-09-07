@@ -12,21 +12,21 @@ its binary representation (1101).
 
 int inspect_bits(unsigned int number)
 {
-    int flag = 0;
-    size_t size = sizeof(unsigned int)*8;
-    for(size_t i=0;i<size;i++){
-        if(CHECK_BIT(number,i)){
-            if(flag) return 1;
-            else flag =1;
-        }
-        else flag = 0;
-    }
-    return 0;
+	int flag = 0;
+	size_t size = sizeof(unsigned int) * 8;
+	for (size_t i = 0; i < size; i++) {
+		if (CHECK_BIT(number, i)) {
+			if (flag) return 1;
+			else flag = 1;
+		}
+		else flag = 0;
+	}
+	return 0;
 }
 
 #ifndef RunTests
-int main ()
+int main()
 {
-    printf("%d", inspect_bits(13));
+	printf("%d", inspect_bits(13));
 }
 #endif

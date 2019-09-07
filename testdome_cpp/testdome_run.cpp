@@ -19,49 +19,49 @@ class Run
 {
 public:
 
-   static int indexOfLongestRun(std::string str)
-   {
-      int largest_run_length = 0;
-      int largest_index      = 0;
+	static int indexOfLongestRun(std::string str)
+	{
+		int largest_run_length = 0;
+		int largest_index = 0;
 
-      int  run_length        = 1;
-      int  index             = 0;
-      char curr_char         = str[0];
+		int  run_length = 1;
+		int  index = 0;
+		char curr_char = str[0];
 
-      for (std::size_t i = 1; i < str.size(); ++i)
-      {
-        if (str[i] == curr_char)
-           ++run_length;
-        else
-        {
-           if (run_length > largest_run_length)
-           {
-              largest_run_length = run_length;
-              largest_index = index;
-           }
+		for (std::size_t i = 1; i < str.size(); ++i)
+		{
+			if (str[i] == curr_char)
+				++run_length;
+			else
+			{
+				if (run_length > largest_run_length)
+				{
+					largest_run_length = run_length;
+					largest_index = index;
+				}
 
-           curr_char = str[i];
-           run_length = 1;
-           index = i;
-        }
-      }
+				curr_char = str[i];
+				run_length = 1;
+				index = i;
+			}
+		}
 
-      if (run_length > largest_run_length)
-      {
-         largest_run_length = run_length;
-         largest_index = index;
-      }
+		if (run_length > largest_run_length)
+		{
+			largest_run_length = run_length;
+			largest_index = index;
+		}
 
-      return largest_index;
-   }
+		return largest_index;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::cout << Run::indexOfLongestRun("abbcccddddcccbba");
+	std::cout << Run::indexOfLongestRun("abbcccddddcccbba");
 
-   return 0;
+	return 0;
 }
 #endif

@@ -14,16 +14,16 @@ resulting in "deleveled", which is a palindrome since it reads the same backward
 using namespace std;
 bool isPalindrome(const std::string& word)
 {
-    size_t len = word.size();
-    for (size_t i = 0;i<len;i++){
-        if(toupper(word[i]) != toupper(word[len-i-1])) return 0;
-    }
-    return 1;
+	size_t len = word.size();
+	for (size_t i = 0; i < len; i++) {
+		if (toupper(word[i]) != toupper(word[len - i - 1])) return 0;
+	}
+	return 1;
 }
 
 #ifndef RunTests
 int main()
 {
-    std::cout << isPalindrome("Deleveled");
+	std::cout << isPalindrome("Deleveled");
 }
 #endif

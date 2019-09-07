@@ -9,61 +9,61 @@ using namespace std;
 class TrainComposition
 {
 public:
-    vector<int> TrainWagons;
-    vector<int>::iterator it;
-    void attachWagonFromLeft(int wagonId)
-    {
-        it = TrainWagons.begin();
-        TrainWagons.insert(it,1,wagonId);
-    }
+	vector<int> TrainWagons;
+	vector<int>::iterator it;
+	void attachWagonFromLeft(int wagonId)
+	{
+		it = TrainWagons.begin();
+		TrainWagons.insert(it, 1, wagonId);
+	}
 
-    void attachWagonFromRight(int wagonId)
-    {
-        TrainWagons.push_back(wagonId);
-    }
+	void attachWagonFromRight(int wagonId)
+	{
+		TrainWagons.push_back(wagonId);
+	}
 
-    int detachWagonFromLeft()
-    {
-        int left = TrainWagons.front();
-        TrainWagons.erase(TrainWagons.begin());
-        return left;
-    }
+	int detachWagonFromLeft()
+	{
+		int left = TrainWagons.front();
+		TrainWagons.erase(TrainWagons.begin());
+		return left;
+	}
 
-    int detachWagonFromRight()
-    {
-        int right  = TrainWagons.back();
-        TrainWagons.pop_back();
-        return right;
-    }
+	int detachWagonFromRight()
+	{
+		int right = TrainWagons.back();
+		TrainWagons.pop_back();
+		return right;
+	}
 };
 #else
 class TrainComposition
 {
 public:
-    deque <int> TrainWagons;
-    void attachWagonFromLeft(int wagonId)
-    {
-        TrainWagons.push_front(wagonId);
-    }
+	deque <int> TrainWagons;
+	void attachWagonFromLeft(int wagonId)
+	{
+		TrainWagons.push_front(wagonId);
+	}
 
-    void attachWagonFromRight(int wagonId)
-    {
-        TrainWagons.push_back(wagonId);
-    }
+	void attachWagonFromRight(int wagonId)
+	{
+		TrainWagons.push_back(wagonId);
+	}
 
-    int detachWagonFromLeft()
-    {
-        int left = TrainWagons.front();
-        TrainWagons.pop_front();
-        return left;
-    }
+	int detachWagonFromLeft()
+	{
+		int left = TrainWagons.front();
+		TrainWagons.pop_front();
+		return left;
+	}
 
-    int detachWagonFromRight()
-    {
-        int right  = TrainWagons.back();
-        TrainWagons.pop_back();
-        return right;
-    }
+	int detachWagonFromRight()
+	{
+		int right = TrainWagons.back();
+		TrainWagons.pop_back();
+		return right;
+	}
 };
 
 #endif
@@ -71,10 +71,10 @@ public:
 #ifndef RunTests
 int main()
 {
-    TrainComposition tree;
-    tree.attachWagonFromLeft(7);
-    tree.attachWagonFromLeft(13);
-    std::cout << tree.detachWagonFromRight() << "\n"; // 7 
-    std::cout << tree.detachWagonFromLeft(); // 13
+	TrainComposition tree;
+	tree.attachWagonFromLeft(7);
+	tree.attachWagonFromLeft(13);
+	std::cout << tree.detachWagonFromRight() << "\n"; // 7 
+	std::cout << tree.detachWagonFromLeft(); // 13
 }
 #endif

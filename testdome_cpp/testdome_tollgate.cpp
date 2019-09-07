@@ -26,35 +26,35 @@ class Tollgate
 {
 public:
 
-   void enter(std::string licensePlate)
-   {
-      l.push_back(licensePlate);
-   }
+	void enter(std::string licensePlate)
+	{
+		l.push_back(licensePlate);
+	}
 
-   std::string exit()
-   {
-      if (l.size() == 0)
-         throw std::logic_error("Tollgate is empty!");
+	std::string exit()
+	{
+		if (l.size() == 0)
+			throw std::logic_error("Tollgate is empty!");
 
-      std::string r = l.front();
+		std::string r = l.front();
 
-      l.pop_front();
+		l.pop_front();
 
-      return r;
-   }
+		return r;
+	}
 
 private:
 
-   std::deque<std::string> l;
+	std::deque<std::string> l;
 };
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   Tollgate tollgate;
-   tollgate.enter("New York");
-   tollgate.enter("LA");
-   std::cout << tollgate.exit() << '\n';
-   std::cout << tollgate.exit() << '\n';
+	Tollgate tollgate;
+	tollgate.enter("New York");
+	tollgate.enter("LA");
+	std::cout << tollgate.exit() << '\n';
+	std::cout << tollgate.exit() << '\n';
 }
 #endif

@@ -12,76 +12,76 @@ using namespace std;
 class MultipleChoiceTest
 {
 public:
-    MultipleChoiceTest(int qc): questionsCount(qc),answers(questionsCount,-1)
-    {
-        
-    }
-    
-   virtual ~MultipleChoiceTest()
-   {}
+	MultipleChoiceTest(int qc) : questionsCount(qc), answers(questionsCount, -1)
+	{
 
-    void setAnswer(int questionIndex, int answer)
-    {
-        answers[questionIndex] = answer;
-    }
+	}
 
-    int getAnswer(int questionIndex) const
-    {
-        return answers[questionIndex];
-    }
+	virtual ~MultipleChoiceTest()
+	{}
+
+	void setAnswer(int questionIndex, int answer)
+	{
+		answers[questionIndex] = answer;
+	}
+
+	int getAnswer(int questionIndex) const
+	{
+		return answers[questionIndex];
+	}
 
 protected:
-    int questionsCount;
+	int questionsCount;
 
 private:
-    vector <int> answers;
+	vector <int> answers;
 };
 
 class TimedMultipleChoiceTest : public MultipleChoiceTest
 {
 public:
-    TimedMultipleChoiceTest(int questionsCount)
-        : MultipleChoiceTest(questionsCount),times(questionsCount,0)
-    {
-        
-    }
-    
-    
-    void setTime(int questionIndex, int time)
-    {
-        times[questionIndex] = time;
-    }
+	TimedMultipleChoiceTest(int questionsCount)
+		: MultipleChoiceTest(questionsCount), times(questionsCount, 0)
+	{
 
-    int getTime(int questionIndex) const
-    {
-        return times[questionIndex];
-    }
+	}
+
+
+	void setTime(int questionIndex, int time)
+	{
+		times[questionIndex] = time;
+	}
+
+	int getTime(int questionIndex) const
+	{
+		return times[questionIndex];
+	}
 
 private:
-    vector <int> times;
+	vector <int> times;
 };
 
 #ifndef RunTests
 void executeTest()
 {
-    MultipleChoiceTest test(5);
-    for (int i = 0; i < 5; i++)
-    {
-        test.setAnswer(i, i);
-    }
+	MultipleChoiceTest test(5);
+	for (int i = 0; i < 5; i++)
+	{
+		test.setAnswer(i, i);
+	}
 
-    for (int i = 0; i < 5; i++)
-    {
-        std::cout << "Question " << i + 1 << ", correct answer: " << test.getAnswer(i) << "\n";
-    }
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << "Question " << i + 1 << ", correct answer: " << test.getAnswer(i) << "\n";
+	}
 }
 
 int main()
 {
-    for (int i = 0; i < 3; i++)
-    {
-        std::cout << "Test: " << i + 1 << "\n";
-        executeTest();
-    }
+	for (int i = 0; i < 3; i++)
+	{
+		std::cout << "Test: " << i + 1 << "\n";
+		executeTest();
+	}
 }
 #endif

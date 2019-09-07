@@ -30,91 +30,91 @@ class Link
 {
 public:
 
-   Link* getLeft() const
-   {
-      return this->left;
-   }
+	Link* getLeft() const
+	{
+		return this->left;
+	}
 
-   Link* getRight() const
-   {
-      return this->right;
-   }
+	Link* getRight() const
+	{
+		return this->right;
+	}
 
-   void append(Link* rightPart)
-   {
-      if (this->right != NULL)
-         throw std::logic_error("Link is already connected.");
+	void append(Link* rightPart)
+	{
+		if (this->right != NULL)
+			throw std::logic_error("Link is already connected.");
 
-      this->right = rightPart;
-      rightPart->left = this;
-   }
+		this->right = rightPart;
+		rightPart->left = this;
+	}
 
 private:
 
-   Link* left;
-   Link* right;
+	Link* left;
+	Link* right;
 };
 
 class Chain
 {
 public:
 
-   static Side whichSideIsLonger(const Link& link)
-   {
-      int l = 0;
-      int r = 0;
+	static Side whichSideIsLonger(const Link& link)
+	{
+		int l = 0;
+		int r = 0;
 
-      std::unordered_set<const Link*> s;
+		std::unordered_set<const Link*> s;
 
-      {
-         const Link* x = &link;
+		{
+			const Link* x = &link;
 
-         while (x->getRight())
-         {
-           s.insert(x);
-           x = x->getRight();
+			while (x->getRight())
+			{
+				s.insert(x);
+				x = x->getRight();
 
-           if (s.find(x) != s.end())
-            return NONE;
+				if (s.find(x) != s.end())
+					return NONE;
 
-           r += 1;
-         }
-      }
+				r += 1;
+			}
+		}
 
-      {
-         const Link* x = &link;
+		{
+			const Link* x = &link;
 
-         while (x->getLeft())
-         {
-           s.insert(x);
-           x = x->getLeft();
+			while (x->getLeft())
+			{
+				s.insert(x);
+				x = x->getLeft();
 
-           if (s.find(x) != s.end())
-            return NONE;
+				if (s.find(x) != s.end())
+					return NONE;
 
-           l += 1;
-         }
-      }
+				l += 1;
+			}
+		}
 
-      if (r > l)
-         return RIGHT;
-      else if (l > r)
-         return LEFT;
-      else
-         return NONE;
-   }
+		if (r > l)
+			return RIGHT;
+		else if (l > r)
+			return LEFT;
+		else
+			return NONE;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   Link* left = new Link();
-   Link* middle = new Link();
-   Link* right = new Link();
-   left->append(middle);
-   middle->append(right);
+	Link* left = new Link();
+	Link* middle = new Link();
+	Link* right = new Link();
+	left->append(middle);
+	middle->append(right);
 
-   std::cout << Chain::whichSideIsLonger(*left);
+	std::cout << Chain::whichSideIsLonger(*left);
 }
 #endif

@@ -13,15 +13,15 @@ return 2 because there are two vector elements less than 4.
 #include <algorithm>
 
 using namespace std;
-int countNumbers(const vector<int>& sortedVector, int lessThan){
-    int n = lessThan;
-    vector<int> target;
-    return std::lower_bound(sortedVector.begin(), sortedVector.end(), lessThan) - sortedVector.begin();
+int countNumbers(const vector<int>& sortedVector, int lessThan) {
+	int n = lessThan;
+	vector<int> target;
+	return std::lower_bound(sortedVector.begin(), sortedVector.end(), lessThan) - sortedVector.begin();
 }
 #ifndef RunTests
 int main()
 {
-    std::vector<int> v { 1, 3, 5, 7 };
-    std::cout << countNumbers(v, 4);
+	std::vector<int> v{ 1, 3, 5, 7 };
+	std::cout << countNumbers(v, 4);
 }
 #endif

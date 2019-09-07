@@ -20,20 +20,20 @@ class SortedSearch
 {
 public:
 
-   static int countNumbers(const std::vector<int>& sortedVector, int lessThan)
-   {
-      return std::distance
-                  (
-                    sortedVector.begin(),
-                    std::lower_bound(sortedVector.begin(), sortedVector.end(), lessThan)
-                  );
-   }
+	static int countNumbers(const std::vector<int>& sortedVector, int lessThan)
+	{
+		return std::distance
+		(
+			sortedVector.begin(),
+			std::lower_bound(sortedVector.begin(), sortedVector.end(), lessThan)
+		);
+	}
 };
 
 #ifndef RunTests
 int main()
 {
-   std::vector<int> v { 1, 3, 5, 7 };
-   std::cout << SortedSearch::countNumbers(v, 4);
+	std::vector<int> v{ 1, 3, 5, 7 };
+	std::cout << SortedSearch::countNumbers(v, 4);
 }
 #endif

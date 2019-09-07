@@ -20,28 +20,28 @@
 class Boxes
 {
 public:
-   static int minimalNumberOfBoxes(int products, int availableLargeBoxes, int availableSmallBoxes)
-   {
-      if (products < 5)
-         return products;
+	static int minimalNumberOfBoxes(int products, int availableLargeBoxes, int availableSmallBoxes)
+	{
+		if (products < 5)
+			return products;
 
-      if ((products - (5 * availableLargeBoxes + availableSmallBoxes)) > 0)
-         return -1;
+		if ((products - (5 * availableLargeBoxes + availableSmallBoxes)) > 0)
+			return -1;
 
-      int rl = products / 5;
+		int rl = products / 5;
 
-      if (rl > availableLargeBoxes)
-        rl = availableLargeBoxes;
+		if (rl > availableLargeBoxes)
+			rl = availableLargeBoxes;
 
-      return rl + (products - 5 * rl);
-   }
+		return rl + (products - 5 * rl);
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::cout << Boxes::minimalNumberOfBoxes(12, 3, 3);
-   return 0;
+	std::cout << Boxes::minimalNumberOfBoxes(12, 3, 3);
+	return 0;
 }
 #endif

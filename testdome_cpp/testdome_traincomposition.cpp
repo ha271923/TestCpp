@@ -22,42 +22,42 @@ class TrainComposition
 {
 public:
 
-   void attachWagonFromLeft(int wagonId)
-   {
-      train_.push_front(wagonId);
-   }
+	void attachWagonFromLeft(int wagonId)
+	{
+		train_.push_front(wagonId);
+	}
 
-   void attachWagonFromRight(int wagonId)
-   {
-      train_.push_back(wagonId);
-   }
+	void attachWagonFromRight(int wagonId)
+	{
+		train_.push_back(wagonId);
+	}
 
-   int detachWagonFromLeft()
-   {
-      int result = train_.front();
-      train_.pop_front();
-      return result;
-   }
+	int detachWagonFromLeft()
+	{
+		int result = train_.front();
+		train_.pop_front();
+		return result;
+	}
 
-   int detachWagonFromRight()
-   {
-      int result = train_.back();
-      train_.pop_back();
-      return result;
-   }
+	int detachWagonFromRight()
+	{
+		int result = train_.back();
+		train_.pop_back();
+		return result;
+	}
 
 private:
 
-    std::deque<int> train_;
+	std::deque<int> train_;
 };
 
 #ifndef RunTests
 int main()
 {
-    TrainComposition tree;
-    tree.attachWagonFromLeft(7);
-    tree.attachWagonFromLeft(13);
-    std::cout << tree.detachWagonFromRight() << "\n"; // 7
-    std::cout << tree.detachWagonFromLeft(); // 13
+	TrainComposition tree;
+	tree.attachWagonFromLeft(7);
+	tree.attachWagonFromLeft(13);
+	std::cout << tree.detachWagonFromRight() << "\n"; // 7
+	std::cout << tree.detachWagonFromLeft(); // 13
 }
 #endif

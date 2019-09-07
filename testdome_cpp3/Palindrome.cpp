@@ -17,7 +17,7 @@ public:
 	static bool isPalindrome(std::string str)
 	{
 		//throw std::logic_error("Waiting to be implemented");
-        str.erase(remove_if(str.begin(), str.end(), [](char c) { return !isalpha(c); }), str.end());
+		str.erase(remove_if(str.begin(), str.end(), [](char c) { return !isalpha(c); }), str.end());
 		std::transform(str.begin(), str.end(), str.begin(), ::tolower);
 		return str == std::string(str.rbegin(), str.rend());
 	}

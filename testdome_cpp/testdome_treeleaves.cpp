@@ -26,30 +26,30 @@ class TreeLeaves
 {
 public:
 
-   static int calculateNumOfLeaves(const std::vector<int>& tree)
-   {
-      std::unordered_set<int> parent_set;
+	static int calculateNumOfLeaves(const std::vector<int>& tree)
+	{
+		std::unordered_set<int> parent_set;
 
-      for (auto v : tree)
-      {
-         if (v != -1)
-          parent_set.insert(v);
-      }
+		for (auto v : tree)
+		{
+			if (v != -1)
+				parent_set.insert(v);
+		}
 
-      return (tree.size() - parent_set.size());
-   }
+		return (tree.size() - parent_set.size());
+	}
 };
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::vector<int> tree;
-   tree.push_back(1);
-   tree.push_back(3);
-   tree.push_back(1);
-   tree.push_back(-1);
-   tree.push_back(3);
+	std::vector<int> tree;
+	tree.push_back(1);
+	tree.push_back(3);
+	tree.push_back(1);
+	tree.push_back(-1);
+	tree.push_back(3);
 
-   std::cout << Tree::calculateNumOfLeaves(tree);
+	std::cout << Tree::calculateNumOfLeaves(tree);
 }
 #endif

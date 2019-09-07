@@ -11,19 +11,19 @@ resulting with "deleveled" which is a palindrome since it reads same backward an
 #include <stdlib.h>
 #include <stdio.h>
 
-int is_palindrome(char *str){
-    int i =0;
-    int len = strlen(str)-1;
-    while(len>i){
-        if(toupper(str[i++])!= toupper(str[len--])) return 0;
-    }
-    return 1;
+int is_palindrome(char* str) {
+	int i = 0;
+	int len = strlen(str) - 1;
+	while (len > i) {
+		if (toupper(str[i++]) != toupper(str[len--])) return 0;
+	}
+	return 1;
 }
 
 #ifndef RunTests
 int main()
 {
-    char *str = "Deleveled";
-    printf("%d", is_palindrome(str));
+	char* str = "Deleveled";
+	printf("%d", is_palindrome(str));
 }
 #endif

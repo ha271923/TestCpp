@@ -24,37 +24,37 @@ using namespace std;
 class Song
 {
 public:
-    Song(string name): name(name), nextSong(NULL) {}
-    void next(Song* song)
-    {
-        this->nextSong = song;
-    }
+	Song(string name) : name(name), nextSong(NULL) {}
+	void next(Song* song)
+	{
+		this->nextSong = song;
+	}
 
-    bool isRepeatingPlaylist(){
-        Song* CurrentSong = this;
-        map<string, int> MapCheck;
-        for (; CurrentSong != NULL; CurrentSong = CurrentSong->nextSong) {
-            auto MapResult = MapCheck.insert(pair<string, int>(CurrentSong->name, 1));
-            if (MapResult.second == false)
-                return 1;
-        }
-        return 0;
-    }
+	bool isRepeatingPlaylist() {
+		Song* CurrentSong = this;
+		map<string, int> MapCheck;
+		for (; CurrentSong != NULL; CurrentSong = CurrentSong->nextSong) {
+			auto MapResult = MapCheck.insert(pair<string, int>(CurrentSong->name, 1));
+			if (MapResult.second == false)
+				return 1;
+		}
+		return 0;
+	}
 
 private:
-    const string name;
-    Song* nextSong;
+	const string name;
+	Song* nextSong;
 };
 
 #ifndef RunTests
 int main()
 {
-    Song* first = new Song("Hello");
-    Song* second = new Song("Eye of the tiger");
+	Song* first = new Song("Hello");
+	Song* second = new Song("Eye of the tiger");
 
-    first->next(second);
-    second->next(first);
+	first->next(second);
+	second->next(first);
 
-    std::cout << std::boolalpha << first->isRepeatingPlaylist();
+	std::cout << std::boolalpha << first->isRepeatingPlaylist();
 }
 #endif

@@ -14,75 +14,75 @@
 
 class DocumentStorage
 {
-   class Document
-   {
-   public:
+	class Document
+	{
+	public:
 
-      Document(std::string title, std::string content)
-      {
-         this->title = title;
-         this->content = content;
-      }
+		Document(std::string title, std::string content)
+		{
+			this->title = title;
+			this->content = content;
+		}
 
-      std::string title;
-      std::string content;
-   };
+		std::string title;
+		std::string content;
+	};
 
 public:
 
-   ~DocumentStorage()
-    {
-       clear();
-    }
+	~DocumentStorage()
+	{
+		clear();
+	}
 
-   void add(int id, std::string title, std::string content)
-   {
-      storage[id] = new Document(title, content);
-   }
+	void add(int id, std::string title, std::string content)
+	{
+		storage[id] = new Document(title, content);
+	}
 
-   void remove(int id, std::string& title, std::string& content)
-   {
-      std::unordered_map<int, Document*>::iterator it = storage.find(id);
+	void remove(int id, std::string& title, std::string& content)
+	{
+		std::unordered_map<int, Document*>::iterator it = storage.find(id);
 
-      if (it == storage.end())
-         return;
+		if (it == storage.end())
+			return;
 
-      Document* doc = it->second;
-      title = doc->title;
-      content = doc->content;
+		Document* doc = it->second;
+		title = doc->title;
+		content = doc->content;
 
-      delete doc;
+		delete doc;
 
-      storage.erase(it);
-   }
+		storage.erase(it);
+	}
 
-   void clear()
-   {
-      for (auto it : storage) delete it.second;
-      storage.clear();
-   }
+	void clear()
+	{
+		for (auto it : storage) delete it.second;
+		storage.clear();
+	}
 
 private:
 
-   std::unordered_map<int, Document*> storage;
+	std::unordered_map<int, Document*> storage;
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   DocumentStorage storage;
-   storage.add(123456, "Hamlet", "Hamlet, Prince of Denmark.");
-   storage.add(123457, "Othello", "Othello, the Moore of Venice.");
+	DocumentStorage storage;
+	storage.add(123456, "Hamlet", "Hamlet, Prince of Denmark.");
+	storage.add(123457, "Othello", "Othello, the Moore of Venice.");
 
-   std::string title, content;
-   storage.remove(123456, title, content);
+	std::string title, content;
+	storage.remove(123456, title, content);
 
-   std::cout << title << '\n';
-   std::cout << content;
+	std::cout << title << '\n';
+	std::cout << content;
 
-   storage.clear();
+	storage.clear();
 
-   return 0;
+	return 0;
 }
 #endif

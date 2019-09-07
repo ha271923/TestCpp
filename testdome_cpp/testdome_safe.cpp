@@ -27,39 +27,39 @@ class Safe
 {
 public:
 
-   Safe(int capacity)
-   {
-      this->capacity = capacity;
-   }
+	Safe(int capacity)
+	{
+		this->capacity = capacity;
+	}
 
-   int getCapacity() const
-   {
-      return capacity;
-   }
+	int getCapacity() const
+	{
+		return capacity;
+	}
 
-   const std::vector<std::string>& getItems() const
-   {
-      return items;
-   }
+	const std::vector<std::string>& getItems() const
+	{
+		return items;
+	}
 
-   void addItem(std::string item)
-   {
-      if (static_cast<int>(items.size()) >= capacity)
-         throw std::logic_error("Overfilled");
+	void addItem(std::string item)
+	{
+		if (static_cast<int>(items.size()) >= capacity)
+			throw std::logic_error("Overfilled");
 
-      items.push_back(item);
-   }
+		items.push_back(item);
+	}
 
-   std::string getDescription()
-   {
-      if (static_cast<int>(items.size()) == capacity)
-         return "Safe is full";
-      else
-         return "Safe: " + std::to_string(items.size()) + "/" + std::to_string(capacity);
-   }
+	std::string getDescription()
+	{
+		if (static_cast<int>(items.size()) == capacity)
+			return "Safe is full";
+		else
+			return "Safe: " + std::to_string(items.size()) + "/" + std::to_string(capacity);
+	}
 
 private:
 
-   std::vector<std::string> items;
-   int capacity;
+	std::vector<std::string> items;
+	int capacity;
 };

@@ -25,29 +25,29 @@ public:
 		value += c;
 	}
 
-	std::string getValue() 
-	{ 
+	std::string getValue()
+	{
 		return value;
 	}
 };
 
-class NumericInput : public TextInput { 
-	public:
-		void add(char c) {
-			if (!isalpha(c)) {
-				//is numeric
-				return TextInput::add(c);
-			}
+class NumericInput : public TextInput {
+public:
+	void add(char c) {
+		if (!isalpha(c)) {
+			//is numeric
+			return TextInput::add(c);
 		}
+	}
 };
 
 #ifndef RunTests
 int main()
 {
-    TextInput* input = new NumericInput();
-    input->add('1');
-    input->add('a');
-    input->add('0');
-    std::cout << input->getValue();
+	TextInput* input = new NumericInput();
+	input->add('1');
+	input->add('a');
+	input->add('0');
+	std::cout << input->getValue();
 }
 #endif

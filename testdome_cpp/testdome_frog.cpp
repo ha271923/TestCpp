@@ -21,28 +21,28 @@ class Frog
 {
 public:
 
-   static int numberOfWays(int n)
-   {
-      if (n == 1)
-        return 1;
-      else if (n == 2)
-        return 2;
-      else
-      {
-        static std::unordered_map<int,int> m;
+	static int numberOfWays(int n)
+	{
+		if (n == 1)
+			return 1;
+		else if (n == 2)
+			return 2;
+		else
+		{
+			static std::unordered_map<int, int> m;
 
-        auto i = m.find(n);
+			auto i = m.find(n);
 
-        if (i != m.end())
-           return i->second;
+			if (i != m.end())
+				return i->second;
 
-        int t = numberOfWays(n - 1) + numberOfWays(n - 2);
+			int t = numberOfWays(n - 1) + numberOfWays(n - 2);
 
-        m[n] = t;
+			m[n] = t;
 
-        return t;
-      }
-   }
+			return t;
+		}
+	}
 
 private:
 };
@@ -50,8 +50,8 @@ private:
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::cout << Frog::numberOfWays(3);
+	std::cout << Frog::numberOfWays(3);
 
-   return 0;
+	return 0;
 }
 #endif

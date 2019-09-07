@@ -21,20 +21,20 @@ class AreAnagrams
 {
 public:
 
-   static bool areStringsAnagrams(std::string a, std::string b)
-   {
-      std::sort(a.begin(),a.end());
-      std::sort(b.begin(),b.end());
+	static bool areStringsAnagrams(std::string a, std::string b)
+	{
+		std::sort(a.begin(), a.end());
+		std::sort(b.begin(), b.end());
 
-      return (a == b);
-   }
+		return (a == b);
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::cout << AreAnagrams::areStringsAnagrams("momdad", "dadmom");
-   return 0;
+	std::cout << AreAnagrams::areStringsAnagrams("momdad", "dadmom");
+	return 0;
 }
 #endif

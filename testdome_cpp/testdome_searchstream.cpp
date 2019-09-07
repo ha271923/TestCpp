@@ -27,33 +27,33 @@ class SearchStream
 {
 public:
 
-   static std::vector<std::string> findLines(std::string keyword, std::istream& inStream)
-   {
-      std::vector<std::string> results;
-      std::string buffer;
+	static std::vector<std::string> findLines(std::string keyword, std::istream& inStream)
+	{
+		std::vector<std::string> results;
+		std::string buffer;
 
-      while (std::getline(inStream,buffer))
-      {
-         if (buffer.find(keyword) != std::string::npos)
-            results.push_back(buffer);
-      }
+		while (std::getline(inStream, buffer))
+		{
+			if (buffer.find(keyword) != std::string::npos)
+				results.push_back(buffer);
+		}
 
-      return results;
-   }
+		return results;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::string inMessage = "Hello, there!\nHow are you today?\nYes, you over there.";
+	std::string inMessage = "Hello, there!\nHow are you today?\nYes, you over there.";
 
-   std::stringstream inStream(inMessage);
-   std::vector<std::string> lines = SearchStream::findLines("there", inStream);
+	std::stringstream inStream(inMessage);
+	std::vector<std::string> lines = SearchStream::findLines("there", inStream);
 
-   for (size_t i = 0; i < lines.size(); i++)
-      std::cout << lines.at(i) << "\n";
+	for (size_t i = 0; i < lines.size(); i++)
+		std::cout << lines.at(i) << "\n";
 
-   return 0;
+	return 0;
 }
 #endif

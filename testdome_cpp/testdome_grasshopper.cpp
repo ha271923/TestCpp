@@ -28,73 +28,73 @@ class Grasshopper
 {
 public:
 
-   Grasshopper(int n, int position)
-   : pos(position)
-   {
-      loc.resize(n + 2);
+	Grasshopper(int n, int position)
+		: pos(position)
+	{
+		loc.resize(n + 2);
 
-      for (std::size_t i = 0; i < loc.size(); ++i)
-      {
-         loc[i].first = false;
-         loc[i].second.first  = i - 1;
-         loc[i].second.second = i + 1;
-      }
-   }
+		for (std::size_t i = 0; i < loc.size(); ++i)
+		{
+			loc[i].first = false;
+			loc[i].second.first = i - 1;
+			loc[i].second.second = i + 1;
+		}
+	}
 
-   /**
-   *   \brief Grasshopper has eaten the current leaf and hopped left.
-   *
-   **/
-   void eatAndHopLeft()
-   {
-      mark();
-      pos = loc[loc[pos].second.first].second.first;
-   }
+	/**
+	*   \brief Grasshopper has eaten the current leaf and hopped left.
+	*
+	**/
+	void eatAndHopLeft()
+	{
+		mark();
+		pos = loc[loc[pos].second.first].second.first;
+	}
 
-   /**
-   *   \brief Grasshopper has eaten the current leaf and hopped right.
-   *
-   **/
-   void eatAndHopRight()
-   {
-      mark();
-      pos = loc[loc[pos].second.second].second.second;
-   }
+	/**
+	*   \brief Grasshopper has eaten the current leaf and hopped right.
+	*
+	**/
+	void eatAndHopRight()
+	{
+		mark();
+		pos = loc[loc[pos].second.second].second.second;
+	}
 
-   /**
-   *   \return Leaf number that grasshopper is feeding on right now.
-   *
-   **/
-   int whereAmI()
-   {
-      return pos;
-   }
+	/**
+	*   \return Leaf number that grasshopper is feeding on right now.
+	*
+	**/
+	int whereAmI()
+	{
+		return pos;
+	}
 
 private:
 
-   void mark()
-   {
-      loc[pos].first = true;
-      loc[loc[pos].second.second].second.first  = loc[pos].second.first;
-      loc[loc[pos].second.first ].second.second = loc[pos].second.second;
-   }
+	void mark()
+	{
+		loc[pos].first = true;
+		loc[loc[pos].second.second].second.first = loc[pos].second.first;
+		loc[loc[pos].second.first].second.second = loc[pos].second.second;
+	}
 
-   std::vector<std::pair<bool,std::pair<int,int>>> loc;
-   int pos;
+	std::vector<std::pair<bool, std::pair<int, int>>> loc;
+	int pos;
 
 };
 
 #ifndef RunTests
 int main(int argc, const char* argloc[])
 {
-   Grasshopper g (5, 2);
-   std::cout << g.whereAmI() << '\n';
+	Grasshopper g(5, 2);
+	std::cout << g.whereAmI() << '\n';
 
-   g.eatAndHopRight();
-   std::cout << g.whereAmI() << '\n';
+	g.eatAndHopRight();
+	std::cout << g.whereAmI() << '\n';
 
-   g.eatAndHopLeft();
-   std::cout << g.whereAmI() << '\n';
+	g.eatAndHopLeft();
+	std::cout << g.whereAmI() << '\n';
 }
 #endif
 

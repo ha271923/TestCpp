@@ -18,10 +18,10 @@
 class TwoSum
 {
 public:
-    static std::pair<int, int> findTwoSum(const std::vector<int>& list, int sum)
-    {
-        //throw std::logic_error("Waiting to be implemented");
-        std::unordered_map<int, int> sumMap;
+	static std::pair<int, int> findTwoSum(const std::vector<int>& list, int sum)
+	{
+		//throw std::logic_error("Waiting to be implemented");
+		std::unordered_map<int, int> sumMap;
 
 		for (std::size_t i = 0; i < list.size(); ++i)
 		{
@@ -34,20 +34,20 @@ public:
 		}
 
 		return std::make_pair(-1, -1);
-    }
+	}
 };
 
 #ifndef RunTests
 int main()
 {
-    std::vector<int> list;
-    list.push_back(1);
-    list.push_back(3);
-    list.push_back(5);
-    list.push_back(7);
-    list.push_back(9);
+	std::vector<int> list;
+	list.push_back(1);
+	list.push_back(3);
+	list.push_back(5);
+	list.push_back(7);
+	list.push_back(9);
 
-    std::pair<int, int> indices = TwoSum::findTwoSum(list, 12);
-    std::cout << indices.first << '\n' << indices.second;
+	std::pair<int, int> indices = TwoSum::findTwoSum(list, 12);
+	std::cout << indices.first << '\n' << indices.second;
 }
 #endif

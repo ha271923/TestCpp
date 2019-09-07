@@ -12,9 +12,9 @@
 
    For example, for the following tree:
 
-    n1 (Value: 1, Left: null, Right: null)
-    n2 (Value: 2, Left: n1, Right: n3)
-    n3 (Value: 3, Left: null, Right: null)
+	n1 (Value: 1, Left: null, Right: null)
+	n2 (Value: 2, Left: n1, Right: n3)
+	n3 (Value: 3, Left: null, Right: null)
 
    Call to contains(n2, 3) should return true since a tree with root at
    n2 contains number 3.
@@ -28,59 +28,59 @@ class Node
 {
 public:
 
-   Node(int value, Node* left, Node* right)
-   {
-      this->value = value;
-      this->left = left;
-      this->right = right;
-   }
+	Node(int value, Node* left, Node* right)
+	{
+		this->value = value;
+		this->left = left;
+		this->right = right;
+	}
 
-   int getValue() const
-   {
-      return value;
-   }
+	int getValue() const
+	{
+		return value;
+	}
 
-   Node* getLeft() const
-   {
-      return left;
-   }
+	Node* getLeft() const
+	{
+		return left;
+	}
 
-   Node* getRight() const
-   {
-      return right;
-   }
+	Node* getRight() const
+	{
+		return right;
+	}
 
 private:
 
-    int value;
-    Node* left;
-    Node* right;
+	int value;
+	Node* left;
+	Node* right;
 };
 
 class BinarySearchTree
 {
 public:
 
-   static bool contains(const Node& root, int value)
-   {
-      if (root.getValue() == value)
-         return true;
-      else if (root.getLeft() && (value < root.getValue()))
-         return contains(*root.getLeft(),value);
-      else if (root.getRight() && (value > root.getValue()))
-         return contains(*root.getRight(),value);
-      else
-         return false;
-   }
+	static bool contains(const Node& root, int value)
+	{
+		if (root.getValue() == value)
+			return true;
+		else if (root.getLeft() && (value < root.getValue()))
+			return contains(*root.getLeft(), value);
+		else if (root.getRight() && (value > root.getValue()))
+			return contains(*root.getRight(), value);
+		else
+			return false;
+	}
 };
 
 #ifndef RunTests
 int main()
 {
-    Node n1(1, NULL, NULL);
-    Node n3(3, NULL, NULL);
-    Node n2(2, &n1, &n3);
+	Node n1(1, NULL, NULL);
+	Node n3(3, NULL, NULL);
+	Node n2(2, &n1, &n3);
 
-    std::cout << BinarySearchTree::contains(n2, 3);
+	std::cout << BinarySearchTree::contains(n2, 3);
 }
 #endif

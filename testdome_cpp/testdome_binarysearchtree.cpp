@@ -33,110 +33,110 @@
 class Node
 {
 public:
-   Node(int value, Node* left, Node* right)
-   {
-      this->value = value;
-      this->left = left;
-      this->right = right;
-   }
+	Node(int value, Node* left, Node* right)
+	{
+		this->value = value;
+		this->left = left;
+		this->right = right;
+	}
 
-   int getValue() const
-   {
-      return value;
-   }
+	int getValue() const
+	{
+		return value;
+	}
 
-   Node* getLeft() const
-   {
-      return left;
-   }
+	Node* getLeft() const
+	{
+		return left;
+	}
 
-   Node* getRight() const
-   {
-      return right;
-   }
+	Node* getRight() const
+	{
+		return right;
+	}
 
 private:
-   int value;
-   Node* left;
-   Node* right;
+	int value;
+	Node* left;
+	Node* right;
 };
 
 class BinarySearchTree
 {
 public:
 
-   static bool isValidBST(const Node& root)
-   {
-      if (!isValidBST_left_impl(root.getLeft(),root.getValue()))
-         return false;
-      else if (!isValidBST_right_impl(root.getRight(),root.getValue()))
-         return false;
-      else if (root.getLeft () && (root.getLeft()->getValue() >= root.getValue()))
-         return false;
-      else if (root.getRight() && (root.getRight()->getValue() < root.getValue()))
-         return false;
-      return true;
-   }
+	static bool isValidBST(const Node& root)
+	{
+		if (!isValidBST_left_impl(root.getLeft(), root.getValue()))
+			return false;
+		else if (!isValidBST_right_impl(root.getRight(), root.getValue()))
+			return false;
+		else if (root.getLeft() && (root.getLeft()->getValue() >= root.getValue()))
+			return false;
+		else if (root.getRight() && (root.getRight()->getValue() < root.getValue()))
+			return false;
+		return true;
+	}
 
 private:
 
-   static bool isValidBST_right_impl(const Node* root, int parent_v)
-   {
-      if (root == 0)
-         return true;
+	static bool isValidBST_right_impl(const Node* root, int parent_v)
+	{
+		if (root == 0)
+			return true;
 
-      if (!branch_leftright(root))
-         return false;
+		if (!branch_leftright(root))
+			return false;
 
-      if (root->getLeft() && root->getRight())
-         return parent_v < std::min(root->getLeft()->getValue(), root->getRight()->getValue());
-      else if (root->getLeft())
-         return parent_v < root->getLeft()->getValue();
-      else if (root->getRight())
-         return parent_v < root->getRight()->getValue();
+		if (root->getLeft() && root->getRight())
+			return parent_v < std::min(root->getLeft()->getValue(), root->getRight()->getValue());
+		else if (root->getLeft())
+			return parent_v < root->getLeft()->getValue();
+		else if (root->getRight())
+			return parent_v < root->getRight()->getValue();
 
-      return parent_v < root->getValue();
-   }
+		return parent_v < root->getValue();
+	}
 
-   static bool isValidBST_left_impl(const Node* root, int parent_v)
-   {
-      if (root == 0)
-         return true;
+	static bool isValidBST_left_impl(const Node* root, int parent_v)
+	{
+		if (root == 0)
+			return true;
 
-      if (!branch_leftright(root))
-         return false;
+		if (!branch_leftright(root))
+			return false;
 
-      if (root->getLeft() && root->getRight())
-         return parent_v >= std::max(root->getLeft()->getValue(), root->getRight()->getValue());
-      else if (root->getLeft())
-         return parent_v >= root->getLeft()->getValue();
-      else if (root->getRight())
-         return parent_v >= root->getRight()->getValue();
+		if (root->getLeft() && root->getRight())
+			return parent_v >= std::max(root->getLeft()->getValue(), root->getRight()->getValue());
+		else if (root->getLeft())
+			return parent_v >= root->getLeft()->getValue();
+		else if (root->getRight())
+			return parent_v >= root->getRight()->getValue();
 
-      return parent_v >= root->getValue();
-   }
+		return parent_v >= root->getValue();
+	}
 
-   static bool branch_leftright(const Node* root)
-   {
-      if (!isValidBST_left_impl(root->getLeft(),root->getValue()))
-         return false;
-      else if (!isValidBST_right_impl(root->getRight(),root->getValue()))
-         return false;
+	static bool branch_leftright(const Node* root)
+	{
+		if (!isValidBST_left_impl(root->getLeft(), root->getValue()))
+			return false;
+		else if (!isValidBST_right_impl(root->getRight(), root->getValue()))
+			return false;
 
-      return true;
-   }
+		return true;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   Node n1(1, NULL, NULL);
-   Node n3(3, NULL, NULL);
-   Node n2(2, &n1, &n3);
+	Node n1(1, NULL, NULL);
+	Node n3(3, NULL, NULL);
+	Node n2(2, &n1, &n3);
 
-   std::cout << BinarySearchTree::isValidBST(n2);
+	std::cout << BinarySearchTree::isValidBST(n2);
 
-   return 0;
+	return 0;
 }
 #endif

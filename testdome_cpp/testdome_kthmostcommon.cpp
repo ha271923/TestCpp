@@ -21,52 +21,52 @@ class Common
 {
 public:
 
-   static int kthMostCommon(const std::vector<int>& a, int k)
-   {
-      if (k > static_cast<int>(a.size()) || k <= 0)
-         return -1;
+	static int kthMostCommon(const std::vector<int>& a, int k)
+	{
+		if (k > static_cast<int>(a.size()) || k <= 0)
+			return -1;
 
-      std::unordered_map<int,int> m;
+		std::unordered_map<int, int> m;
 
-      for (auto i : a)
-      {
-         m[i]++;
-      }
+		for (auto i : a)
+		{
+			m[i]++;
+		}
 
-      std::vector<std::pair<int,int>> n(m.size());
+		std::vector<std::pair<int, int>> n(m.size());
 
-      std::copy(m.begin(),m.end(),n.begin());
+		std::copy(m.begin(), m.end(), n.begin());
 
-      std::nth_element(n.begin(),n.begin() + (k - 1), n.end(),
-                       [](auto x, auto y){ return y.second < x.second; });
+		std::nth_element(n.begin(), n.begin() + (k - 1), n.end(),
+			[](auto x, auto y) { return y.second < x.second; });
 
-      return (n.begin() + (k - 1))->first;
-   }
+		return (n.begin() + (k - 1))->first;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::vector<int> input;
-   input.push_back(1);
-   input.push_back(2);
-   input.push_back(2);
-   input.push_back(3);
-   input.push_back(3);
-   input.push_back(3);
-   input.push_back(4);
-   input.push_back(4);
-   input.push_back(4);
-   input.push_back(4);
-   input.push_back(5);
-   input.push_back(5);
-   input.push_back(5);
-   input.push_back(5);
-   input.push_back(5);
-   int x = Common::kthMostCommon(input, 2);
-   std::cout << x;
+	std::vector<int> input;
+	input.push_back(1);
+	input.push_back(2);
+	input.push_back(2);
+	input.push_back(3);
+	input.push_back(3);
+	input.push_back(3);
+	input.push_back(4);
+	input.push_back(4);
+	input.push_back(4);
+	input.push_back(4);
+	input.push_back(5);
+	input.push_back(5);
+	input.push_back(5);
+	input.push_back(5);
+	input.push_back(5);
+	int x = Common::kthMostCommon(input, 2);
+	std::cout << x;
 
-   return 0;
+	return 0;
 }
 #endif

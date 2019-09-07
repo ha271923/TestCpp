@@ -22,38 +22,38 @@ class ArrayMath
 {
 public:
 
-   static double weightedMean(const std::vector<int>& values, const std::vector<int>& weights)
-   {
-      if (values.size() != weights.size())
-         throw std::invalid_argument("Argument exception");
+	static double weightedMean(const std::vector<int>& values, const std::vector<int>& weights)
+	{
+		if (values.size() != weights.size())
+			throw std::invalid_argument("Argument exception");
 
-      double sum = 0.0;
-      double sumWeights = 0.0;
+		double sum = 0.0;
+		double sumWeights = 0.0;
 
-      for (size_t i = 0; i < weights.size(); ++i)
-      {
-         sumWeights += weights[i];
-      }
+		for (size_t i = 0; i < weights.size(); ++i)
+		{
+			sumWeights += weights[i];
+		}
 
-      for (size_t i = 0; i < values.size(); ++i)
-      {
-         sum += (values[i] * (1.0 * weights[i]));
-      }
+		for (size_t i = 0; i < values.size(); ++i)
+		{
+			sum += (values[i] * (1.0 * weights[i]));
+		}
 
-      return sum / sumWeights;
-   }
+		return sum / sumWeights;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::vector<int> a, b;
-   a.push_back(1);
-   a.push_back(2);
-   b.push_back(4);
-   b.push_back(2);
-   std::cout << ArrayMath::weightedMean(a, b);
-   return 0;
+	std::vector<int> a, b;
+	a.push_back(1);
+	a.push_back(2);
+	b.push_back(4);
+	b.push_back(2);
+	std::cout << ArrayMath::weightedMean(a, b);
+	return 0;
 }
 #endif

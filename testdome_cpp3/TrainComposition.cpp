@@ -12,49 +12,49 @@
 class TrainComposition
 {
 private:
-    
-    std::deque<int> train;
-    
+
+	std::deque<int> train;
+
 public:
-    
-    void attachWagonFromLeft(int wagonId)
-    {
-        //throw std::logic_error("Waiting to be implemented");
-        train.push_front(wagonId);
-    }
 
-    void attachWagonFromRight(int wagonId)
-    {
-        //throw std::logic_error("Waiting to be implemented");
-        train.push_back(wagonId);
-        
-    }
+	void attachWagonFromLeft(int wagonId)
+	{
+		//throw std::logic_error("Waiting to be implemented");
+		train.push_front(wagonId);
+	}
 
-    int detachWagonFromLeft()
-    {
-        //throw std::logic_error("Waiting to be implemented");
-        int result = train.front();
-        train.pop_front();
-        return result;
-        
-    }
+	void attachWagonFromRight(int wagonId)
+	{
+		//throw std::logic_error("Waiting to be implemented");
+		train.push_back(wagonId);
 
-    int detachWagonFromRight()
-    {
-        //throw std::logic_error("Waiting to be implemented");
-        int result = train.back();
-        train.pop_back();
-        return result;        
-    }    
+	}
+
+	int detachWagonFromLeft()
+	{
+		//throw std::logic_error("Waiting to be implemented");
+		int result = train.front();
+		train.pop_front();
+		return result;
+
+	}
+
+	int detachWagonFromRight()
+	{
+		//throw std::logic_error("Waiting to be implemented");
+		int result = train.back();
+		train.pop_back();
+		return result;
+	}
 };
 
 #ifndef RunTests
 int main()
 {
-    TrainComposition tree;
-    tree.attachWagonFromLeft(7);
-    tree.attachWagonFromLeft(13);
-    std::cout << tree.detachWagonFromRight() << "\n"; // 7 
-    std::cout << tree.detachWagonFromLeft(); // 13
+	TrainComposition tree;
+	tree.attachWagonFromLeft(7);
+	tree.attachWagonFromLeft(13);
+	std::cout << tree.detachWagonFromRight() << "\n"; // 7 
+	std::cout << tree.detachWagonFromLeft(); // 13
 }
 #endif

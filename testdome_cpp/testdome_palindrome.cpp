@@ -22,31 +22,31 @@
 class Palindrome
 {
 public:
-   static bool isPalindrome(std::string str)
-   {
+	static bool isPalindrome(std::string str)
+	{
 
-      str.erase(std::remove_if(str.begin(),
-                               str.end(),
-                               [](char x) { return std::isalpha(x) == 0;}),
-                               str.end());
+		str.erase(std::remove_if(str.begin(),
+			str.end(),
+			[](char x) { return std::isalpha(x) == 0; }),
+			str.end());
 
-      for (std::size_t i = 0; i < str.size() / 2; ++i)
-      {
-         auto c0 = std::tolower(str[i]);
-         auto c1 = std::tolower(str[str.size() - i - 1]);
+		for (std::size_t i = 0; i < str.size() / 2; ++i)
+		{
+			auto c0 = std::tolower(str[i]);
+			auto c1 = std::tolower(str[str.size() - i - 1]);
 
-         if (c0 != c1)
-            return false;
-      }
+			if (c0 != c1)
+				return false;
+		}
 
-      return true;
-   }
+		return true;
+	}
 };
 
 
 #ifndef RunTests
 int main(int argc, const char* argv[])
 {
-   std::cout << Palindrome::isPalindrome("Noel sees Leon.");
+	std::cout << Palindrome::isPalindrome("Noel sees Leon.");
 }
 #endif
