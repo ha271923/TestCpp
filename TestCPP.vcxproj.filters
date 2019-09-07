@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\testdome_cpp">
+      <UniqueIdentifier>{5460c996-b81e-4b0c-b948-aa2f1c695150}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestCPP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_allanagrams.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_areanagrams.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_arraymath.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_binarysearch.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_binarysearchtree.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_boxes.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_cachingcalculator.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_chain.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_datastruct.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_dispatcher.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_document_storage.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_friends.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_frog.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_grasshopper.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_kthmostcommon.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_magic_forest.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_multiplechoicetest.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_names_count.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_palindrome.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_passwordvalidation.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_path.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_permissions.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_run.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_safe.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_searchstream.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_sortedsearch.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_sum3.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_tollgate.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_traincomposition.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_treeheight.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_treeleaves.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_twosum.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="testdome_cpp\testdome_userinput.cpp">
+      <Filter>Source Files\testdome_cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

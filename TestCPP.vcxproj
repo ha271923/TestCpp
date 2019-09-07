@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{F8614AB5-48B8-492A-B2EF-F291B515DCA9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TestCPP</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="TestCPP.cpp" />
+    <ClCompile Include="testdome_cpp2\BST.cpp" />
+    <ClCompile Include="testdome_cpp2\MultipleChoiceTest.cpp" />
+    <ClCompile Include="testdome_cpp2\palindrome.cpp" />
+    <ClCompile Include="testdome_cpp2\path.cpp" />
+    <ClCompile Include="testdome_cpp2\sortedSearch.cpp" />
+    <ClCompile Include="testdome_cpp2\trainComposition.cpp" />
+    <ClCompile Include="testdome_cpp2\twoSum.cpp" />
+    <ClCompile Include="testdome_cpp2\userInput.cpp" />
+    <ClCompile Include="testdome_cpp3\BinarySearchTree.cpp" />
+    <ClCompile Include="testdome_cpp3\MergeNames.cpp" />
+    <ClCompile Include="testdome_cpp3\MultipleChoiceTest.cpp" />
+    <ClCompile Include="testdome_cpp3\Palindrome.cpp" />
+    <ClCompile Include="testdome_cpp3\Pipeline.cpp" />
+    <ClCompile Include="testdome_cpp3\Playlist.cpp" />
+    <ClCompile Include="testdome_cpp3\SortedSearch.cpp" />
+    <ClCompile Include="testdome_cpp3\TrainComposition.cpp" />
+    <ClCompile Include="testdome_cpp3\Two Sum.cpp" />
+    <ClCompile Include="testdome_cpp3\UserInput.cpp" />
+    <ClCompile Include="testdome_cpp4\MergeNames.cpp" />
+    <ClCompile Include="testdome_cpp4\MultipleChoice.cpp" />
+    <ClCompile Include="testdome_cpp4\Palindrome.cpp" />
+    <ClCompile Include="testdome_cpp4\Playlist.cpp" />
+    <ClCompile Include="testdome_cpp4\sortedsearch.cpp" />
+    <ClCompile Include="testdome_cpp4\Twosum.cpp" />
+    <ClCompile Include="testdome_cpp4\Userinput.cpp" />
+    <ClCompile Include="testdome_cppc\BST_cpp\BST.cpp" />
+    <ClCompile Include="testdome_cppc\BST_c\BST.c" />
+    <ClCompile Include="testdome_cppc\Inspect_Bits_c\Inspect_Bits.c" />
+    <ClCompile Include="testdome_cppc\MergeNames_cpp\MergeNames.cpp" />
+    <ClCompile Include="testdome_cppc\Palindrome_cpp\Palindrome.cpp" />
+    <ClCompile Include="testdome_cppc\Palindrome_c\Palindrome.c" />
+    <ClCompile Include="testdome_cppc\Polymorphism\Polymorphism.cpp" />
+    <ClCompile Include="testdome_cppc\SongPlaylist_cpp\SongPlaylist.cpp" />
+    <ClCompile Include="testdome_cppc\SortedSearch_cpp\SortedSearch.cpp" />
+    <ClCompile Include="testdome_cppc\SortingWords_c\SortingWords.c" />
+    <ClCompile Include="testdome_cppc\TrainComposition_cpp\TrainComposition.cpp" />
+    <ClCompile Include="testdome_cppc\TwoSum_cpp\TwoSum.cpp" />
+    <ClCompile Include="testdome_cppc\UserInput_cpp\UserInput.cpp" />
+    <ClCompile Include="testdome_cppc\WatchedVideos_c\WatchedVideos.c" />
+    <ClCompile Include="testdome_cpp\testdome_allanagrams.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_areanagrams.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_arraymath.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_binarysearch.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_binarysearchtree.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_boxes.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_cachingcalculator.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_chain.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_datastruct.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_dispatcher.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_document_storage.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_friends.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_frog.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_grasshopper.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_kthmostcommon.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_magic_forest.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_multiplechoicetest.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_names_count.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_palindrome.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_passwordvalidation.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_path.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_permissions.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_run.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_safe.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_searchstream.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_sortedsearch.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_sum3.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_tollgate.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_traincomposition.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_treeheight.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_treeleaves.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_twosum.cpp" />
+    <ClCompile Include="testdome_cpp\testdome_userinput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="testdome_cpp2\README.md" />
+    <None Include="testdome_cpp3\README.md" />
+    <None Include="testdome_cpp4\BinaryTree" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
